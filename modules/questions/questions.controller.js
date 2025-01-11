@@ -46,7 +46,7 @@ exports.questionsFind = async function (req, res, next) {
 exports.questionsCount = async function (req, res, next) {
   try {
 
-    let catagoryData = await QUESTIONS.find().count()
+    let catagoryData = await QUESTIONS.find().countDocuments()
     res.status(200).json({
       status: "success",
       message: "questions Count success",

@@ -49,7 +49,7 @@ exports.categoryFind = async function (req, res, next) {
 
 exports.categoryCount = async function (req, res, next) {
   try {
-    let catagoryData = await CATEGORY.find().count();
+    let catagoryData = await CATEGORY.find().countDocuments();
 
     res.status(200).json({
       status: "success",

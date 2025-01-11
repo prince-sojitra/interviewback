@@ -46,7 +46,7 @@ exports.subcatagoryFind = async function (req, res, next) {
 
 exports.subcatagoryCount = async function (req, res, next) {
   try {
-    let categoryData = await SUBCATEGORY.find().count();
+    let categoryData = await SUBCATEGORY.find().countDocuments();
     res.status(200).json({
       status: "success",
       message: "sub-category Count success",
